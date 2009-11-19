@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<style type="text/css">
+		.main
+		{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			margin-top: 30px;
+			margin-bottom: 20px;
+		}
+		.ok
+		{
+           width: 100px; 
+           height:100px;
+           background-color: red;
+           /*border-radius: 50%;*/
+
+		}
+
+		.ok2
+		{
+			
+			width: 100px;
+			height: 50px;
+			background-color: orange;
+		}
+		.yes
+		{
+			margin-top: 20px;
+		}
+		.remainder
+		{
+			width: 30px;
+			height: 20px;
+			background-color: orange;
+			margin-top: -50px;
+			margin-left: 150px;
+		}
+		
+		
+	</style>
+<input type="text" id="a">
+<button onclick=print()>click here</button>
+<div id="main" class=main></div>
+
+
+
+
+
+
+<input type="text" id="c" >
+<input type="text" id="d" >
+<div class="ok" id="add"></div>
+<button onclick=print1() class="btn2">click here</button><br>
+
+
+
+<input type="text" id="x" class="yes" >
+<input type="text" id="y" class="yes" >
+<div class="ok2" id="z"></div>
+<button onclick=print2()>click here</button>
+<div class="remainder" id="remainder"></div>
+
+
+
+
+
+</body>
+<script>
+	function print(){
+		
+		var no = document.getElementById("a").value;
+		alert(no);
+		 document.getElementById("main").innerHTML = no;
+	}
+
+	function print1()
+	{
+		var no1 = document.getElementById("c").value;
+		var no2 = document.getElementById("d").value;
+		     document.getElementById("add").innerHTML =(no1*no2);
+		     
+
+	}
+
+
+
+
+function print2()
+	{
+		var s = document.getElementById("x").value;
+		var  m = document.getElementById("y").value;
+		     document.getElementById("z").innerHTML =(s/m);
+		     // document.getElementById("remainder").innerHTML =(s/m=%);
+
+	}
+
+
+
+</script>
+</html>
