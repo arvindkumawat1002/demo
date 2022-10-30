@@ -54,8 +54,8 @@
 
 
 
-<input type="text" id="c" placeholder="type any number for multiply" >
-<input type="text" id="d"  placeholder="type any number for multiply">
+<input type="text" id="c" placeholder="type any number for addition" >
+<input type="text" id="d"  placeholder="type any number for addition">
 <div class="ok" id="add"></div>
 <button onclick=print1() class="btn2">click here</button><br>
 
@@ -84,7 +84,7 @@
 	{
 		var no1 = document.getElementById("c").value;
 		var no2 = document.getElementById("d").value;
-		     document.getElementById("add").innerHTML =(no1*no2);
+		     document.getElementById("add").innerHTML =parseInt(no1)+parseInt(no2);
 		     
 
 	}
@@ -97,8 +97,7 @@ function print2()
 		var s = document.getElementById("x").value;
 		var  m = document.getElementById("y").value;
 		     document.getElementById("z").innerHTML =(s/m);
-		     // document.getElementById("remainder").innerHTML =(s/m=%);
-
+		     document.getElementById("remainder").innerHTML =(s%m);
 	}
 
 
