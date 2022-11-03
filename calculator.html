@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+
+<style>
+	.main
+	{
+		width: 400px;
+		height: 750px;
+		background-color: white;
+		box-shadow: 3px 5px 20px black;
+		margin-left: 50px;
+		margin-top: 50px;
+		border-radius: 20px;
+		position: relative;
+	}
+	.out-put
+	{
+		width: 340px;
+		height: 100px;
+		background-color: white;
+		box-shadow: 1px 2px 10px black;
+		margin-left: 30px;
+		position:absolute;
+		border:1px solid white;
+		border-radius: 10px;
+		margin-top: 80px;
+
+	}
+	.out-put:hover
+	{
+		box-shadow: 1px 2px 10px pink;
+
+	}
+	.top
+	{
+		width: 60px;
+		height:10px;
+		background-color: black;
+		position: absolute;
+		margin-left: 170px;
+		margin-top: 20px;
+		border-radius: 30px;
+	}
+	.circle
+	{
+		position: absolute;
+		width: 10px;
+		height: 10px;
+		margin-left: 250px;
+		background-color: black;
+		margin-top: 20px;
+		border-radius: 100%;
+	}
+	.btn-body
+	{
+		width: 400px;
+		height: 400px;
+		background-color: white;
+		/*box-shadow: 1px 2px 10px black;*/
+		position:absolute;
+		margin-top: 220px;
+
+	}
+	.hori
+	{
+		width: 370px;
+		height: 50px;
+		/*border:1px solid black;*/
+		margin-top: 20px;
+		display: flex;
+		margin-left: 15px;
+		justify-content: space-around;
+
+
+	}
+	.hori-in
+	{
+		width: 50px;
+		height: 50px;
+		background-color: white;
+		box-shadow: .5px .2px 8px 0000;
+		border-radius: 10px;
+
+	}
+	.hori-in:hover
+	{
+       color: red;
+	}
+	.hori-in h2
+	{
+		margin-left: 20px;
+		margin-top: 10px;
+		color: #ccc;
+		font-size: 30px;
+	}
+	.hori-in h2:hover
+	{
+		color:black;
+		cursor: pointer;
+	}
+
+	.hori2
+	{
+		width: 280px;
+		height: 50px;
+		/*border:1px solid black;*/
+		margin-top: 20px;
+		display: flex;
+		margin-left: 15px;
+		justify-content: space-around;
+	}
+	.hori-in2
+	{
+		width: 50px;
+		height: 50px;
+		background-color: white;
+		box-shadow: 1px 2px 10px 0000;
+		border-radius: 10px;
+	}
+	.hori-in2:hover
+	{
+       color: red;
+	}
+	.hori-in2 h2:hover
+	{
+		color: black;
+		cursor: pointer;
+	}
+	.equal
+	{
+		width: 50px;
+		height: 120px;
+		background-color: white;
+		box-shadow: 1px 2px 10px 0000;
+		border-radius: 10px;
+		position: absolute;
+		margin-top: -120px;
+		margin-left: 315px;
+	}
+
+	.hori-in2 h2
+	{
+		margin-left: 20px;
+		margin-top: 10px;
+		color: #ccc;
+		font-size: 30px;
+	}
+
+	.hori-in h1
+	{
+		font-size: 22px;
+		margin-left: 10px;
+		margin-top: 10px;
+	}
+
+	.hori-in h3
+	{
+		margin-left: 15px;
+		margin-top: 10px;
+		font-size: 25px;
+		font-weight: 800;
+	}
+	.equal h4
+	{
+		margin-top: 30px;
+		margin-left: 15px;
+		font-size: 40px;
+		font-weight: 800;
+	}
+	.hori-in2 h3
+	{
+		margin-left: 20px;
+		font-size: 30px;
+		margin-top: 10px;
+		font-weight:800;
+	}
+	.hori-in h5
+	{
+		font-size:40px;
+		font-weight: 800;
+		margin-top:1px;
+		margin-left: 15px;
+		
+	}
+	.out-put input
+	{
+
+		width: 330px;
+		height: 92px;
+		border-radius: 10px;
+		margin-top: 1px;
+		border-style: none;
+		size: 30px;
+
+
+	}
+	.out-put input::placeholder
+	{
+          font-size: 70px;
+	}
+	.equal:hover
+	{
+		color: red;
+	
+	}
+	.hori-in:hover
+	{
+ 		cursor: pointer;	
+	}
+	.hori-in2:hover
+	{
+		cursor: pointer;
+	}
+
+
+	
+
+
+</style>
+<body>
+    <div class="main">
+    	<div class="top"></div>
+             
+        <div class="btn-body">
+
+        	<div class="hori">
+        		<div class="hori-in" onclick="clear()"><h1>AC</h1>></div>
+        		<div class="hori-in" onclick="digit('+/-')"><h3>+/-</h3></div>
+        		<div class="hori-in" onclick="digit('%')"><h3>%<h3></div>
+        		<div class="hori-in" onclick="digit('/')"><h3>/</h3></div>
+        	</div>
+
+        	<div class="hori">
+        		<div class="hori-in" onclick="digit('7')"><h2>7</h2></div>
+        		<div class="hori-in" onclick="digit('8')"><h2>8</h2></div>
+        		<div class="hori-in" onclick="digit('9')"><h2>9</h2></div>
+        		<div class="hori-in" onclick="digit('*')"><h3>X</h3></div>
+        	</div>
+
+        	<div class="hori">
+        		<div class="hori-in" onclick="digit('4')"><h2>4</h2></div>
+        		<div class="hori-in" onclick="digit('5')"><h2>5</h2></div>
+        		<div class="hori-in" onclick="digit('6')"><h2>6</h2></div>
+        		<div class="hori-in"><h5>-</h5></div>
+        	</div>
+        	
+        	<div class="hori2">
+
+        		<div class="hori-in2" onclick="digit('1')"><h2>1</h2></div>
+        		<div class="hori-in2" onclick="digit('2')"><h2>2</h2></div>
+        		<div class="hori-in2" onclick="digit('3')"><h2>3</h2></div>
+
+
+        	</div>
+
+        	<div class="hori2">
+
+        		<div class="hori-in2" onclick="digit('0')"><h2>0</h2></div>
+        		<div class="hori-in2" onclick="digit('.')"><h2>.</h2></div>
+        		<div class="hori-in2" onclick="digit('+')"><h3>+</h3></div>
+
+        		
+        	</div>
+
+       			  <div class="equal" onclick="equal()"><h4>=</h4></div>
+
+       </div>
+
+
+    		<div class="circle"></div>
+
+    		<div class="out-put">
+
+    			<input type="text" placeholder="0" id="output">
+
+    		</div>
+    </div>
+    <script>
+    	 
+    	 var output = document.getElementById('output');
+
+    	 function digit(num)
+    	 {
+    	 	output.value += num;
+    	 }
+    	  function equal()
+    	  {
+    	  	try
+    	  	{
+    	  		output.value = eval(output.value);
+    	  	}
+    	  	catch(error)
+    	  	{
+    	  		alear("Invalid Expression")
+    	  	}
+    	  }
+
+    	  function clear()
+    	  {
+    	  	output.value = "0";
+    	  } 
+
+    </script>
+</body>
+</html>
